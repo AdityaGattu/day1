@@ -16,7 +16,7 @@ book1=Book.new("adi")
 puts book1.get_name
 
 book2=Book.new("The davinci code.")
-puts book2.get_name
+              puts book2.get_name
 
 #creating object
 #obj1=cls1.new
