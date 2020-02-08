@@ -21,13 +21,11 @@ class Todo
 
   def to_displayable_string
     todo_record = ""
-    todo_record = @completed ? "[X] " : "[ ] "
-    if @due_date == Date.today
-      todo_record += @text
-    else
-      todo_record += @text + " " + @due_date.to_s
+    todo_record = @completed ? "[X] #{@text}" : "[ ] #{@text}"
+    if !due_today?
+      todo_record += " #{@due_date}"
     end
-    todo_record
+    return todo_record
   end
 end
 
